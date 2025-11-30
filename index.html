@@ -1,171 +1,628 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>MGOS GOLD — Investor Showcase</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>MGOS GOLD — Investor Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
+  <style>
+    :root {
+      --bg: #05070a;
+      --bg-alt: #0b0f16;
+      --accent: #00ffcc;
+      --accent-soft: #00e0ff;
+      --danger: #ff3366;
+      --text: #d9e2ff;
+      --muted: #7f8ca3;
+      --border: #1a222f;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
-        margin: 0;
-        font-family: "Segoe UI", Roboto, sans-serif;
-        background-color: #0b0e10;
-        color: #d6d6d6;
-        line-height: 1.6;
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
-    header {
-        padding: 40px;
-        text-align: center;
-        background: linear-gradient(180deg, #0f1418, #0b0e10);
-        border-bottom: 1px solid #222;
-    }
-    h1 {
-        font-size: 42px;
-        font-weight: 700;
-        color: #00ffcc;
-        text-shadow: 0px 0px 8px #00997a;
-    }
-    h2 {
-        color: #00e0ff;
-        margin-top: 50px;
-        border-left: 5px solid #00e0ff;
-        padding-left: 10px;
-    }
-    .container {
-        max-width: 1100px;
-        margin: auto;
-        padding: 20px;
-    }
-    .box {
-        background: rgba(255,255,255,0.03);
-        padding: 20px;
-        border: 1px solid #222;
-        border-radius: 6px;
-        margin-top: 20px;
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 15px;
-    }
-    table, th, td {
-        border: 1px solid #333;
-    }
-    th {
-        background: #111;
-    }
-    th, td {
-        padding: 10px;
-        text-align: center;
-    }
-    .success {
-        color: #00ff99;
-        font-weight: bold;
-    }
-    .fail {
-        color: #ff0066;
-        font-weight: bold;
-    }
-    footer {
-        text-align: center;
-        margin-top: 60px;
-        padding: 20px;
-        color: #666;
-    }
+
     a {
-        color: #00e0ff;
-        text-decoration: none;
+      color: var(--accent-soft);
+      text-decoration: none;
     }
+
     a:hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
-</style>
+
+    /* NAVBAR */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(180deg, #05070a 0%, #05070aee 60%, transparent 100%);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .nav-logo span {
+      color: var(--accent-soft);
+    }
+
+    .nav-links a {
+      margin-left: 18px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-soft);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 60px 20px 40px;
+      background: radial-gradient(circle at 0 0, rgba(0, 255, 204, 0.12), transparent 55%),
+                  radial-gradient(circle at 100% 0, rgba(0, 224, 255, 0.12), transparent 55%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 40px;
+      font-weight: 800;
+      margin: 0 0 12px;
+      color: var(--accent);
+      text-shadow: 0 0 12px rgba(0, 255, 204, 0.5);
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .hero-badges {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      border-radius: 999px;
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .badge-good {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .hero-cta {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+      border-color: var(--accent-soft);
+      color: #020305;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent-soft);
+      color: var(--accent-soft);
+    }
+
+    .hero-panel {
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(7,13,20,0.95), rgba(5,7,10,0.98));
+      padding: 18px 18px 16px;
+      font-size: 12px;
+    }
+
+    .hero-panel-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .hero-metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .metric {
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      padding: 6px 8px;
+      text-align: left;
+    }
+
+    .metric-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+    }
+
+    .metric-value {
+      font-size: 15px;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .metric-good {
+      color: var(--accent);
+    }
+
+    .metric-bad {
+      color: var(--danger);
+    }
+
+    .hero-panel-footer {
+      font-size: 11px;
+      color: var(--muted);
+      border-top: 1px dashed var(--border);
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* CONTENT SECTIONS */
+
+    .section {
+      padding: 40px 20px 10px;
+    }
+
+    .inner {
+      max-width: 1180px;
+      margin: 0 auto 30px;
+      display: grid;
+      gap: 24px;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.8fr);
+    }
+
+    .section-full {
+      max-width: 1180px;
+      margin: 0 auto 30px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: var(--accent-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .section-kicker {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .box {
+      background: var(--bg-alt);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 16px 18px;
+      font-size: 14px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .list-tight {
+      padding-left: 18px;
+      margin: 6px 0;
+    }
+
+    .list-tight li {
+      margin: 4px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 6px 8px;
+      text-align: center;
+    }
+
+    th {
+      background: #090d13;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .success {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .fail {
+      color: var(--danger);
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 18px 20px 26px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero-title {
+        font-size: 32px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <h1>MGOS GOLD — Investor Showcase</h1>
-    <p>Defense-Grade Nonlinear Fusion Engine • TRL-6 Validated • OPSEC-Clean</p>
-</header>
-
-<div class="container">
-
-    <h2>1. Executive Summary</h2>
-    <div class="box">
-        <p><strong>MGOS GOLD</strong> is a nonlinear multi-domain fusion engine built for hybrid conflict environments.  
-           Operating under <strong>Φ(x) logic</strong> and fractal STCL architecture, it delivers true defense-grade anomaly detection and escalation forecasting.</p>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        MGOS <span>GOLD</span> / STCL
+      </div>
+      <div class="nav-links">
+        <a href="#summary">Summary</a>
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#validation">Validation</a>
+        <a href="#architecture">STCL</a>
+        <a href="#market">Market</a>
+        <a href="#downloads">Pack</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
+  </nav>
 
-    <h2>2. Mathematical Validation (The Money Slide)</h2>
-    <div class="box">
-        <p>The engine has been validated in extreme asymmetric scenarios.  
-        Below is the critical benchmark demonstrating superiority over linear models:</p>
+  <!-- HERO -->
+  <section class="hero" id="summary">
+    <div class="hero-inner">
+      <div>
+        <h1 class="hero-title">MGOS GOLD — Autonomous Multi-INT Fusion Engine</h1>
+        <p class="hero-sub">
+          Defense-grade nonlinear decision engine for hybrid conflict. Fuses OSINT / SIGINT / HUMINT / CYBER / GEOINT
+          and anticipates escalation before human analysts see it.
+        </p>
+        <div class="hero-badges">
+          <div class="badge badge-good">TRL-6 Validated</div>
+          <div class="badge">Fractal STCL Core</div>
+          <div class="badge">Nonlinear Φ(x) Logic</div>
+          <div class="badge">Air-Gapped / OPSEC Clean</div>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#validation">View The Money Slide</a>
+          <a class="btn btn-outline" href="#downloads">Download Investor Pack</a>
+        </div>
+      </div>
 
+      <div class="hero-panel">
+        <div class="hero-panel-title">
+          <span>MGOS GOLD — CORE TEST SNAPSHOT</span>
+          <span>CLASS: DEFENSE / GOVTECH</span>
+        </div>
+        <div class="hero-metric-grid">
+          <div class="metric">
+            <div class="metric-label">Asymmetric Cyber</div>
+            <div class="metric-value">
+              <span class="fail">0.27</span> → <span class="metric-good">1.00</span>
+            </div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">False Negatives</div>
+            <div class="metric-value metric-good">Mitigated</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Pass Rate</div>
+            <div class="metric-value metric-good">100%</div>
+          </div>
+        </div>
+        <div class="hero-panel-footer">
+          <span>Linear model: blind to asymmetric escalation.</span>
+          <span>MGOS: forces alert at critical fracture point.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM + SOLUTION -->
+  <section class="section" id="problem">
+    <div class="inner">
+      <div>
+        <div class="section-kicker">01 · Problem</div>
+        <div class="section-title">Linear analytics fails in nonlinear warfare</div>
+        <div class="box">
+          <p class="muted">
+            Current analytical stacks are built on linear aggregation (averages, dashboards, static scoring).
+            In hybrid conflict this leads to <strong>Average Dilution</strong>:
+          </p>
+          <ul class="list-tight">
+            <li>critical cyber or info signals are averaged out as “noise”</li>
+            <li>False Negatives appear in exactly the scenarios that matter most</li>
+            <li>analysts drown in dashboards instead of seeing fracture points</li>
+          </ul>
+          <p class="muted">
+            Hybrid operations (CYBER + PSYOPS + GEOINT) are designed to exploit these blind spots.
+            Traditional BI / SIEM / Excel-style tooling was never built for hyper-game dynamics.
+          </p>
+        </div>
+      </div>
+
+      <div id="solution">
+        <div class="section-kicker">02 · Solution</div>
+        <div class="section-title">Nonlinear Φ(x) engine with fractal STCL architecture</div>
+        <div class="box">
+          <p>
+            MGOS GOLD replaces “describe and average” with <strong>explain and escalate</strong>.
+          </p>
+          <ul class="list-tight">
+            <li>Nonlinear Φ(x) decision logic instead of simple thresholds</li>
+            <li>Multi-INT fusion: OSINT / SIGINT / HUMINT / CYBER / GEOINT / DIPLO</li>
+            <li>Fractal STCL core: same logic from drone-level to HQ-level</li>
+            <li>Defense-grade interpretability: explainable reasoning instead of black-box AI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALIDATION ("MONEY SLIDE") -->
+  <section class="section" id="validation">
+    <div class="section-full">
+      <div class="section-kicker">03 · Validation</div>
+      <div class="section-title">Mathematical Proof — 0.27 → 1.00</div>
+      <div class="box">
+        <p class="muted">
+          Below is the core benchmark scenario demonstrating why MGOS GOLD is a different class of system.
+        </p>
         <table>
-            <tr>
-                <th>Test</th>
-                <th>Linear Model</th>
-                <th>MGOS GOLD (Φ(x))</th>
-                <th>Status</th>
-            </tr>
-            <tr>
-                <td>Asymmetric Cyber Attack</td>
-                <td class="fail">0.27 (FAIL)</td>
-                <td class="success">1.00 (PASS)</td>
-                <td class="success">TRUE POSITIVE</td>
-            </tr>
-            <tr>
-                <td>Sensor Failure (Dead Man’s Switch)</td>
-                <td class="fail">0.00 (False Peace)</td>
-                <td class="success">DEFCON 4 (Error Mode)</td>
-                <td class="success">CORRECT</td>
-            </tr>
+          <tr>
+            <th>Scenario</th>
+            <th>Metric</th>
+            <th>Linear Model</th>
+            <th>MGOS GOLD (Φ(x))</th>
+            <th>Verdict</th>
+          </tr>
+          <tr>
+            <td>Asymmetric Cyber Attack</td>
+            <td>WSS Score</td>
+            <td class="fail">0.27 (FAIL)</td>
+            <td class="success">1.00 (PASS)</td>
+            <td class="success">TRUE POSITIVE</td>
+          </tr>
+          <tr>
+            <td>Sensor Failure / Dead Man’s Switch</td>
+            <td>DEFCON Level</td>
+            <td class="fail">0 (False Peace)</td>
+            <td class="success">4 (Error Mode)</td>
+            <td class="success">CORRECT — sensors quarantined</td>
+          </tr>
         </table>
-    </div>
+        <p class="muted" style="margin-top:10px;">
+          Linear engines quietly miss the attack (False Negative). MGOS GOLD forces escalation and triggers
+          a controlled response path.
+        </p>
+      </div>
 
-    <h2>3. Hardcore Validation Summary</h2>
-    <div class="box">
-        <p>Engine proven stable under 23 extreme escalation scenarios (<strong>100% pass rate</strong>).</p>
-        <ul>
-            <li>DEFCON-1 Total War Simulation — PASS</li>
-            <li>NATO A1 Fracture Point — PASS</li>
-            <li>Cyber-Dominant Hybrid Conflict — PASS</li>
-            <li>PsyOps Coherent Fake Attempt — PASS</li>
+      <div style="height: 12px;"></div>
+
+      <div class="section-title">Hardcore Validation Suite</div>
+      <div class="box">
+        <p class="muted">
+          MGOS GOLD has been tested on a curated suite of <strong>23 extreme cases</strong>, designed as
+          NATO-class and beyond-NATO hybrid scenarios:
+        </p>
+        <ul class="list-tight">
+          <li>DEFCON-1 Total War Simulation — <strong class="success">PASS</strong></li>
+          <li>NATO A1 fracture point — <strong class="success">PASS</strong></li>
+          <li>Cyber-dominant escalation across multi-domain — <strong class="success">PASS</strong></li>
+          <li>PsyOps coherent fake / hyper-narratives — <strong class="success">PASS</strong></li>
         </ul>
+        <p class="muted">
+          Full results available in: <code>MGOS_SHOWCASE_PACK/reports/hardcore_summary.json</code>.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <h2>4. STCL Architecture (High-Level)</h2>
-    <div class="box">
-        <p>A secure, air-gapped layer with cryptographic decision signing and automatic sensor quarantine.</p>
-        <ul>
-            <li>Air-Gapped Core (0% cloud)</li>
-            <li>Dead-Man’s-Switch Sensor Isolation</li>
-            <li>Fractal Scaling (drone → HQ)</li>
-            <li>Explainable Reasoning Layers (Δ / Φ / STCL)</li>
-        </ul>
+  <!-- ARCHITECTURE + MARKET -->
+  <section class="section" id="architecture">
+    <div class="inner">
+      <div>
+        <div class="section-kicker">04 · STCL Architecture</div>
+        <div class="section-title">Secure Trusted Core Layer (STCL)</div>
+        <div class="box">
+          <p>
+            MGOS GOLD is built as a <strong>Secure Trusted Core Layer</strong> — a hardened, air-gapped engine that
+            can sit under existing command systems.
+          </p>
+          <ul class="list-tight">
+            <li><strong>Air-Gapped Core:</strong> 0% cloud, self-contained runtime.</li>
+            <li><strong>Cryptographic Decision Signing:</strong> every decision can be audited.</li>
+            <li><strong>Dead-Man’s-Switch:</strong> automatic sensor quarantine and alert on failure.</li>
+            <li><strong>Fractal Scaling:</strong> same code path for tactical and strategic tiers.</li>
+          </ul>
+          <p class="muted">
+            The core engine itself is <strong>proprietary and not included</strong> in this repository.
+            This page exposes only high-level, OPSEC-clean artefacts.
+          </p>
+        </div>
+      </div>
+
+      <div id="market">
+        <div class="section-kicker">05 · Market</div>
+        <div class="section-title">Dual-Use: Defense & Strategic Industries</div>
+        <div class="box">
+          <ul class="list-tight">
+            <li><strong>Defense / GovTech:</strong> joint HQs, fusion centers, threat analysis units.</li>
+            <li><strong>Banking & Energy:</strong> critical infrastructure, systemic risk monitoring.</li>
+            <li><strong>Strategic Intelligence Units:</strong> state-level security & strategic foresight.</li>
+          </ul>
+          <p class="muted">
+            MGOS GOLD is positioned as a <strong>core decision engine</strong>, licensable per deployment
+            with recurring support and upgrade contracts.
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <h2>5. Download Investor Pack</h2>
-    <div class="box">
-        <p>You can download the redacted Investor Pack below:</p>
-        <ul>
+  <!-- BUSINESS MODEL + DOWNLOADS -->
+  <section class="section" id="downloads">
+    <div class="inner">
+      <div>
+        <div class="section-kicker">06 · Business Model</div>
+        <div class="section-title">Licensing & Services</div>
+        <div class="box">
+          <ul class="list-tight">
+            <li><strong>Annual Licenses (ARR):</strong> per-deployment core engine licensing.</li>
+            <li><strong>Paid PoC:</strong> scoped pilots (40–120k EUR range).</li>
+            <li><strong>Maintenance & Support:</strong> security updates, tuning, expert support.</li>
+            <li><strong>Integrations:</strong> optional modules and custom connectors.</li>
+          </ul>
+          <p class="muted">
+            Current round: <strong>Seed</strong>. Objective: harden MGOS 2.0 STCL Core, certify, and close
+            1–2 paid PoCs with strategic customers.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-kicker">07 · Investor Pack</div>
+        <div class="section-title">Download (Redacted & OPSEC-Clean)</div>
+        <div class="box">
+          <p class="muted">
+            The following artefacts are included in the public-safe Investor Pack:
+          </p>
+          <ul class="list-tight">
+            <li>Redacted Technical Validation Report (PDF)</li>
+            <li>Investor Pitch Deck (PDF)</li>
+            <li>Hardcore validation JSON summary</li>
+            <li>I/O examples (redacted)</li>
+          </ul>
+          <p>
+            <strong>Downloads:</strong>
+          </p>
+          <ul class="list-tight">
             <li><a href="MGOS_SHOWCASE_PACK/docs/Technical_Validation_Redacted.pdf">Technical Validation (PDF)</a></li>
             <li><a href="MGOS_SHOWCASE_PACK/docs/MGOS_Investor_Pitch_Deck.pdf">Pitch Deck (PDF)</a></li>
             <li><a href="MGOS_SHOWCASE_PACK.zip">Complete Investor ZIP</a></li>
-        </ul>
+          </ul>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <h2>6. Contact</h2>
-    <div class="box">
-        <p><strong>Piotr Łukasz Jurkiewicz, PhD</strong><br>
-        Creator of MGOS GOLD • Logic Architect (Φ(x))<br>
-        Watermark ID: <strong>8F9E-4C12-AB77-F2D9-4331-9BB4-55AD-E61A</strong></p>
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-full">
+      <div class="section-kicker">08 · Contact</div>
+      <div class="section-title">Principal Investigator & Architect</div>
+      <div class="box">
+        <p>
+          <strong>Piotr Łukasz Jurkiewicz, PhD</strong><br>
+          Founder & Architect of MGOS GOLD · Author of Φ(x) Logic
+        </p>
+        <p class="muted">
+          Watermark ID: <strong>8F9E-4C12-AB77-F2D9-4331-9BB4-55AD-E61A</strong><br>
+          Core engine code, formal methods and internal architectures remain fully proprietary and are not part of this repository.
+        </p>
+      </div>
     </div>
+  </section>
 
-</div>
-
-<footer>© 2025 MGOS GOLD — All Rights Reserved</footer>
+  <footer>
+    © 2025 MGOS GOLD — All Rights Reserved · Investor-Facing Showcase (No Core Engine Code)
+  </footer>
 
 </body>
 </html>

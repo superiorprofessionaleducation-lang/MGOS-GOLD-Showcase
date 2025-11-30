@@ -1,0 +1,52 @@
+# ============================
+#  MGOS SAFETY .gitignore
+#  (Anti-Leak for Core Engine)
+# ============================
+
+# BLOCK ANY ENGINE OR CORE FILES
+mgos/
+MGOS/
+engine/
+core/
+fusion/
+intel/
+diagnostics/
+security/
+kernel/
+system/
+strategy/
+ontology/
+human/
+logic/
+formalisms/
+api/
+
+# BLOCK PYTHON CODE (engine protection)
+*.py
+*.pyc
+__pycache__/
+
+# BLOCK BACKUPS
+backups/
+**/repo_core/
+**/MGOS_3_0_FULL/
+**/MGOS GOLD/
+**/MGOS_BACKUP*/
+
+# BLOCK ZIPs WITH FULL SOURCE
+MGOS_*.zip
+*.zip
+!MGOS_SHOWCASE_PACK.zip   # <-- ALLOW ONLY THIS ONE ZIP
+
+# BLOCK TESTS (always sensitive)
+tests/
+test/
+*_test.py
+test_*.py
+*.ipynb
+
+# BLOCK LOCAL SYSTEM FILES
+.DS_Store
+.idea/
+.vscode/
+*.log

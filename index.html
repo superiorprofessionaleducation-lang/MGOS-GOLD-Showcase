@@ -358,6 +358,7 @@
         <a href="#validation">Validation</a>
         <a href="#architecture">STCL</a>
         <a href="#market">Market</a>
+        <a href="#blackbox">Black-Box</a>
         <a href="#downloads">Pack</a>
         <a href="#contact">Contact</a>
       </div>
@@ -370,8 +371,8 @@
       <div>
         <h1 class="hero-title">MGOS GOLD — Autonomous Multi-INT Fusion Engine</h1>
         <p class="hero-sub">
-          Defense-grade nonlinear decision engine for hybrid conflict. Fuses OSINT / SIGINT / HUMINT / CYBER / GEOINT
-          and anticipates escalation before human analysts see it.
+          Defense-grade nonlinear decision engine for hybrid conflict.  
+          Fuses OSINT / SIGINT / HUMINT / CYBER / GEOINT and anticipates escalation before human analysts see it.
         </p>
         <div class="hero-badges">
           <div class="badge badge-good">TRL-6 Validated</div>
@@ -422,18 +423,14 @@
         <div class="section-title">Linear analytics fails in nonlinear warfare</div>
         <div class="box">
           <p class="muted">
-            Current analytical stacks are built on linear aggregation (averages, dashboards, static scoring).
-            In hybrid conflict this leads to <strong>Average Dilution</strong>:
+            Current analytical stacks rely on linear aggregation (averages, dashboards).  
+            In hybrid conflict this leads to <strong>Average Dilution</strong>.
           </p>
           <ul class="list-tight">
-            <li>critical cyber or info signals are averaged out as “noise”</li>
-            <li>False Negatives appear in exactly the scenarios that matter most</li>
+            <li>critical cyber or info signals are averaged out</li>
+            <li>false negatives appear during escalation</li>
             <li>analysts drown in dashboards instead of seeing fracture points</li>
           </ul>
-          <p class="muted">
-            Hybrid operations (CYBER + PSYOPS + GEOINT) are designed to exploit these blind spots.
-            Traditional BI / SIEM / Excel-style tooling was never built for hyper-game dynamics.
-          </p>
         </div>
       </div>
 
@@ -445,24 +442,24 @@
             MGOS GOLD replaces “describe and average” with <strong>explain and escalate</strong>.
           </p>
           <ul class="list-tight">
-            <li>Nonlinear Φ(x) decision logic instead of simple thresholds</li>
-            <li>Multi-INT fusion: OSINT / SIGINT / HUMINT / CYBER / GEOINT / DIPLO</li>
+            <li>Nonlinear Φ(x) logic instead of weighted averages</li>
+            <li>Multi-INT fusion: OSINT / SIGINT / HUMINT / CYBER / GEOINT</li>
             <li>Fractal STCL core: same logic from drone-level to HQ-level</li>
-            <li>Defense-grade interpretability: explainable reasoning instead of black-box AI</li>
+            <li>Explainable decision path (no black-box AI)</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VALIDATION ("MONEY SLIDE") -->
+  <!-- VALIDATION -->
   <section class="section" id="validation">
     <div class="section-full">
       <div class="section-kicker">03 · Validation</div>
       <div class="section-title">Mathematical Proof — 0.27 → 1.00</div>
       <div class="box">
         <p class="muted">
-          Below is the core benchmark scenario demonstrating why MGOS GOLD is a different class of system.
+          Core benchmark scenario demonstrating nonlinear escalation detection.
         </p>
         <table>
           <tr>
@@ -481,261 +478,146 @@
           </tr>
           <tr>
             <td>Sensor Failure / Dead Man’s Switch</td>
-            <td>DEFCON Level</td>
+            <td>DEFCON</td>
             <td class="fail">0 (False Peace)</td>
             <td class="success">4 (Error Mode)</td>
-            <td class="success">CORRECT — sensors quarantined</td>
+            <td class="success">Correct — sensors quarantined</td>
           </tr>
         </table>
-
-        <!-- BLOCK #1 — Independent Verification -->
-        <div class="section-title" style="margin-top:28px;">Independent Verification — Why This Is Not a Mockup</div>
-        <div class="box">
-          <p class="muted">
-            One of the most common investor questions is: <em>“How do I know the engine actually works if I cannot see the source code?”</em><br>
-            Below is a transparent, defense-industry-standard explanation.
-          </p>
-
-          <h4 style="margin-top:14px;">1. The Engine Reacts to Real Inputs (Not Hardcoded)</h4>
-          <ul class="list-tight">
-            <li><strong>All-zero inputs</strong> → Engine raised <strong>Sensor Malfunction</strong></li>
-            <li><strong>High-threat cyber vector</strong> → Engine escalated to <strong>DEFCON 1</strong></li>
-            <li><strong>Randomized inputs</strong> → Output changed on every run</li>
-          </ul>
-
-          <p class="muted">
-            A fake or static engine would always output the same state.  
-            MGOS GOLD outputs change dynamically — proving real computation.
-          </p>
-
-          <h4 style="margin-top:14px;">2. Mathematical Consistency (0.27 → 1.00)</h4>
-          <p class="muted">
-            Outputs match independent reproduction in <code>math_proof.py</code>:
-          </p>
-          <ul class="list-tight">
-            <li><strong>0.27</strong> — linear average → incorrect non-escalation</li>
-            <li><strong>1.00</strong> — Φ(x) nonlinear escalation → correct alert</li>
-          </ul>
-
-          <p class="muted">
-            Matching values prove the nonlinear logic is calculating a real decision function, not hallucinating.
-          </p>
-        </div>
-
       </div>
 
       <div style="height: 12px;"></div>
 
-      <!-- HARDCORE VALIDATION -->
       <div class="section-title">Hardcore Validation Suite</div>
       <div class="box">
         <p class="muted">
-          MGOS GOLD has been tested on a curated suite of <strong>23 extreme cases</strong>, representing NATO-class and beyond-NATO hybrid scenarios:
+          Tested on <strong>23 extreme cases</strong> replicating NATO-grade hybrid scenarios.
         </p>
         <ul class="list-tight">
-          <li>DEFCON-1 Total War Simulation — <strong class="success">PASS</strong></li>
-          <li>NATO A1 fracture point — <strong class="success">PASS</strong></li>
-          <li>Cyber-dominant escalation — <strong class="success">PASS</strong></li>
-          <li>PsyOps coherent fake narratives — <strong class="success">PASS</strong></li>
+          <li>DEFCON-1 Total War — PASS</li>
+          <li>NATO A1 fracture point — PASS</li>
+          <li>Cyber-dominant multi-domain escalation — PASS</li>
+          <li>PsyOps coherent fake / narrative attack — PASS</li>
         </ul>
-        <p class="muted">
-          Full results available in: <code>MGOS_SHOWCASE_PACK/reports/hardcore_summary.json</code>.
-        </p>
       </div>
     </div>
   </section>
 
-  <!-- SYNTHETIC DOCTRINE-BASED DATA -->
-<section class="section" id="synthetic">
-  <div class="section-full">
-    <div class="section-kicker">04 · Validation Basis</div>
-    <div class="section-title">Doctrine-Based Synthetic Data</div>
-
-    <div class="box">
-      <p class="muted">
-        All MGOS GOLD validation scenarios use <strong>Doctrine-Based Synthetic Data</strong> — the same approach used
-        in NATO and defense R&D. These are not classified materials; they are doctrinally accurate simulations.
-      </p>
-
-      <ul class="list-tight">
-        <li>NATO Multi-Domain Operations (MDO)</li>
-        <li>Strategic Concept 2022 hybrid escalation models</li>
-        <li>EMCON / radio silence doctrine</li>
-        <li>Tallinn Manual cyber-escalation thresholds</li>
-        <li>PsyOps coherent fake patterns</li>
-      </ul>
-
-      <p class="muted">
-        These scenarios are realistic enough to validate nonlinear fusion,  
-        but clean and legal for public and investor-facing materials.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-  <!-- ARCHITECTURE + MARKET -->
+  <!-- STCL ARCHITECTURE -->
   <section class="section" id="architecture">
     <div class="inner">
       <div>
         <div class="section-kicker">04 · STCL Architecture</div>
-        <div class="section-title">Secure Trusted Core Layer (STCL)</div>
+        <div class="section-title">Secure Trusted Core Layer</div>
         <div class="box">
-          <p>
-            MGOS GOLD is built as a <strong>Secure Trusted Core Layer</strong> — a hardened, air-gapped engine that
-            can be deployed inside critical infrastructure without cloud dependencies.
-          </p>
           <ul class="list-tight">
-            <li><strong>Air-Gapped Core:</strong> 0% cloud, isolated runtime</li>
-            <li><strong>Cryptographic Decision Signing:</strong> full audit chain</li>
-            <li><strong>Dead-Man’s-Switch:</strong> automatic sensor quarantine</li>
-            <li><strong>Fractal Scaling:</strong> identical logic from tactical to strategic levels</li>
+            <li><strong>Air-Gapped Core:</strong> 0% cloud dependency</li>
+            <li><strong>Cryptographic Decision Signing</strong></li>
+            <li><strong>Dead-Man’s-Switch:</strong> auto sensor quarantine</li>
+            <li><strong>Fractal Scaling:</strong> tactical ↔ strategic parity</li>
           </ul>
-          <p class="muted">
-            The core engine is <strong>proprietary</strong> and not included here.  
-            This page contains only OPSEC-clean, investor-facing artefacts.
-          </p>
         </div>
       </div>
 
       <div id="market">
         <div class="section-kicker">05 · Market</div>
-        <div class="section-title">Dual-Use: Defense & Strategic Industries</div>
+        <div class="section-title">Dual-Use: Defense & Critical Industries</div>
         <div class="box">
           <ul class="list-tight">
-            <li><strong>Defense / GovTech:</strong> joint HQs, threat intelligence, fusion centers</li>
-            <li><strong>Banking & Energy:</strong> systemic risk monitoring</li>
-            <li><strong>Strategic Intelligence Units:</strong> state-level foresight</li>
+            <li>Defense / GovTech</li>
+            <li>Banking & Energy</li>
+            <li>Strategic Intelligence Units</li>
           </ul>
-          <p class="muted">
-            MGOS GOLD is deployed under annual licensing, paid pilots (PoC), and integration contracts.
-          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GOLIATH MAP — COMPETITIVE POSITIONING -->
-<section class="section" id="goliath">
-  <div class="section-full">
-    <div class="section-kicker">06 · Strategic Positioning</div>
-    <div class="section-title">GOLIATH MAP — Where MGOS Fits</div>
+  <!-- BLACK BOX DEMONSTRATION -->
+  <section class="section" id="blackbox">
+    <div class="section-full">
+      <div class="section-kicker">06 · Black-Box Verification</div>
+      <div class="section-title">How We Prove MGOS Works Without Revealing Core Code</div>
 
-    <div class="box">
-      <p class="muted">
-        The global defense analytics market is dominated by heavy, billion-dollar platforms.
-        MGOS GOLD does not try to imitate them — it occupies a different, highly specialized niche.
-      </p>
+      <div class="box">
+        <p class="muted">
+          MGOS GOLD follows the verification model used in defense and banking:  
+          <strong>Black-Box Demonstration</strong>.  
+          Trust comes from repeatable behavior — not code disclosure.
+        </p>
 
-      <table>
-        <tr>
-          <th>Company</th>
-          <th>Platform</th>
-          <th>Strength</th>
-          <th>Limitation</th>
-        </tr>
-        <tr>
-          <td>Palantir</td>
-          <td>Gotham / Foundry</td>
-          <td>Nation-scale data aggregation</td>
-          <td>Cloud-dependent, long deployments, high cost</td>
-        </tr>
-        <tr>
-          <td>Anduril</td>
-          <td>Lattice OS</td>
-          <td>Autonomy + sensor fusion</td>
-          <td>Hardware-tied, not software-first</td>
-        </tr>
-        <tr>
-          <td>NATO / DoD</td>
-          <td>JADC2-style systems</td>
-          <td>High-level doctrine integration</td>
-          <td>Legacy stacks, linear models, slow cycles</td>
-        </tr>
-      </table>
+        <h4 style="margin-top:12px;color:#00e0ff;">Step 1 — Show the Input</h4>
+        <pre style="background:#0b0f16;padding:10px;border-radius:8px;font-size:12px;">
+{
+  "OSINT": 0.20,
+  "HUMINT": 0.15,
+  "CYBER": 0.96,
+  "GEOINT": 0.10,
+  "SIGINT": 0.80,
+  "DIPLO": 0.10
+}
+        </pre>
 
-      <p class="muted" style="margin-top:10px;">
-        MGOS GOLD = Precision nonlinear escalation engine for hybrid conflict.
-      </p>
+        <h4 style="margin-top:12px;color:#00e0ff;">Step 2 — Show Linear Model Failure</h4>
+        <pre style="background:#0b0f16;padding:10px;border-radius:8px;font-size:12px;color:#ff3366;">
+Linear Model → 0.39   (False Negative — system stays asleep)
+        </pre>
 
-      <ul class="list-tight">
-        <li>Air-gapped / offline deployment</li>
-        <li>Fracture-point detection ignored by linear models</li>
-        <li>Deploys in minutes, not years</li>
-        <li>Designed for hybrid warfare patterns</li>
-      </ul>
+        <h4 style="margin-top:12px;color:#00e0ff;">Step 3 — Run MGOS GOLD (Live)</h4>
+        <pre style="background:#0b0f16;padding:10px;border-radius:8px;font-size:12px;color:#00ffcc;">
+MGOS GOLD → 1.00   (Critical Threat — DEFCON 1)
+        </pre>
 
-      <p style="margin-top:12px; color:var(--accent-soft); font-weight:600;">
-        “Palantir is an aircraft carrier. MGOS GOLD is an autonomous precision torpedo.”
-      </p>
+        <h4 style="margin-top:12px;color:#00e0ff;">Step 4 — Modify Input Live</h4>
+        <p class="muted">
+          Investor requests input changes → MGOS recomputes instantly → behavior proves authenticity.
+        </p>
+
+        <h4 style="margin-top:12px;color:#00e0ff;">Step 5 — Trust Through Behavior</h4>
+        <ul class="list-tight">
+          <li>Doctrine-based synthetic scenarios</li>
+          <li>Baseline vs MGOS comparison</li>
+          <li>Live input modification</li>
+          <li>Consistent output under variation</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- BUSINESS MODEL + DOWNLOADS -->
+  <!-- DOWNLOADS -->
   <section class="section" id="downloads">
     <div class="inner">
       <div>
-        <div class="section-kicker">06 · Business Model</div>
-        <div class="section-title">Licensing & Services</div>
-        <div class="box">
-          <ul class="list-tight">
-            <li><strong>Annual Licenses (ARR)</strong> per-deployment licensing</li>
-            <li><strong>Paid PoC</strong> — €40–120k</li>
-            <li><strong>Maintenance & Support:</strong> updates + secure enhancements</li>
-            <li><strong>Integrations:</strong> add-ons and connectors</li>
-          </ul>
-          <p class="muted">
-            Current round: <strong>Seed (€300k)</strong>  
-            Goal: MGOS 2.0 STCL Core + Certification + 1–2 paid PoCs.
-          </p>
-        </div>
-      </div>
-
-      <div>
         <div class="section-kicker">07 · Investor Pack</div>
-        <div class="section-title">Download (Redacted & OPSEC-Safe)</div>
+        <div class="section-title">Download (Redacted)</div>
         <div class="box">
-          <p class="muted">
-            Included in the public investor pack:
-          </p>
-          <ul class="list-tight">
-            <li>Technical Validation Report (PDF, redacted)</li>
-            <li>Investor Pitch Deck (PDF)</li>
-            <li>Hardcore validation summary (JSON)</li>
-            <li>Redacted I/O examples</li>
-          </ul>
-          <p><strong>Downloads:</strong></p>
           <ul class="list-tight">
             <li><a href="MGOS_SHOWCASE_PACK/docs/Technical_Validation_Redacted.pdf">Technical Validation PDF</a></li>
-            <li><a href="MGOS_SHOWCASE_PACK/docs/MGOS_Investor_Pitch_Deck.pdf">Pitch Deck PDF</a></li>
+            <li><a href="MGOS_SHOWCASE_PACK/docs/MGOS_Investor_Pitch_Deck.pdf">Investor Pitch Deck</a></li>
             <li><a href="MGOS_SHOWCASE_PACK.zip">Complete Investor ZIP</a></li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="section-full">
-      <div class="section-kicker">08 · Contact</div>
-      <div class="section-title">Principal Investigator & Architect</div>
-      <div class="box">
-        <p>
-          <strong>Piotr Łukasz Jurkiewicz, PhD</strong><br>
-          Founder & Architect of MGOS GOLD · Author of Φ(x) Logic
-        </p>
-        <p class="muted">
-          Watermark ID: <strong>8F9E-4C12-AB77-F2D9-4331-9BB4-55AD-E61A</strong><br>
-          Core engine code, internal algorithms and full logic remain proprietary and are NOT included in this repository.
-        </p>
+      <div id="contact">
+        <div class="section-kicker">08 · Contact</div>
+        <div class="section-title">Principal Investigator</div>
+        <div class="box">
+          <p>
+            <strong>Piotr Łukasz Jurkiewicz, PhD</strong><br>
+            Founder & Architect of MGOS GOLD · Author of Φ(x) Logic
+          </p>
+          <p class="muted">
+            Watermark ID: <strong>8F9E-4C12-AB77-F2D9-4331-9BB4-55AD-E61A</strong><br>
+            Core engine code remains fully proprietary.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2025 MGOS GOLD — All Rights Reserved · Investor-Facing Showcase (No Core Engine Code)
+    © 2025 MGOS GOLD — All Rights Reserved · Investor-Facing Showcase (No Core Code)
   </footer>
 
 </body>

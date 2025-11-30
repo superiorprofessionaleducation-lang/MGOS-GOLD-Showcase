@@ -1,0 +1,8 @@
+{
+  "OSINT": 0.20,
+  "HUMINT": 0.15,
+  "CYBER": 0.96,
+  "GEOINT": 0.10,
+  "SIGINT": 0.80,
+  "DIPLO": 0.10
+}

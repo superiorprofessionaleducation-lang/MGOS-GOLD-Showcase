@@ -1,44 +1,13 @@
 
-# 🛡️ MGOS GOLD — Nonlinear Fusion Engine (Showcase)
+# 🛡️ MGOS GOLD — Verified Nonlinear Fusion Engine
 
-## 🎯 Executive Summary
+**Public Showcase:** [View Live Dashboard](https://root.github.io/MGOS-GOLD-Showcase/)
 
-MGOS GOLD rozwiązuje problem ślepoty analityki liniowej na ataki asymetryczne.
+> **Status:** TRL-6 (Technology Readiness Level 6)
+> **Author:** Piotr Łukasz Jurkiewicz, PhD
 
-### **Dowód 1 — Linear vs Nonlinear**
-| Test | Linear | MGOS GOLD | Verdict |
-|---|---:|---:|---|
-| Cyber Attack | 0.27 | **1.00** | PASS |
+This repository contains the **Investor Showcase** for MGOS GOLD. 
+It includes validation reports, architectural overviews, and strategic differentiators.
 
-### **Dowód 2 — I/O Validation**
-Pełne przykłady: `docs/Technical_IO_Examples.md`
-
-### **Dowód 3 — Hardcore Validation (NEW)**
-Pełne wyniki: `reports/hardcore_summary.json`
-
----
-
-
-# 🎯 PITCH DECK — MGOS GOLD
-
-## 5. VALIDATION — THE MONEY SLIDE
-
-| Metric | Linear Model (Std) | MGOS GOLD | Verdict |
-| :--- | :---: | :---: | :--- |
-| WSS Score | **0.27** | **1.00** | 🚀 Success |
-| DEFCON Level | 4 (Guarded) | **1/2 (Critical)** | TRUE POSITIVE |
-
-## Hardcore Validation Summary (NEW)
-
-| Test Case | Result | Notes |
-|---|---|---|
-| Total War Escalation | PASS | Nonlinear override triggered |
-| Asymmetric Cyber Attack | PASS | φ(x) detected hidden signal |
-| Sensor Collapse (DMS) | PASS | Dead-Man’s-Switch engaged |
-
-
----
-
-### Kontakt  
-Piotr Łukasz Jurkiewicz, PhD  
-Watermark ID: 8F9E-4C12-AB77-F2D9-4331-9BB4-55AD-E61A
+**Note:** The Core Engine code is proprietary and held in a secure, air-gapped repository.
+    

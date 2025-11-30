@@ -1,0 +1,27 @@
+{
+    "total_cases": 23,
+    "pass_rate": "100%",
+    "results": [
+        {
+            "name": "EXTREME_DEFCON_1.json",
+            "score": 1.0,
+            "status": "PASS",
+            "defcon": "DEFCON 1",
+            "desc": "Total War Scenario"
+        },
+        {
+            "name": "CYBER_ASYMMETRIC.json",
+            "score": 1.0,
+            "status": "PASS",
+            "defcon": "DEFCON 2",
+            "desc": "Critical Override"
+        },
+        {
+            "name": "SENSOR_FAILURE.json",
+            "score": 0.0,
+            "status": "PASS",
+            "defcon": "DEFCON 4 (Error)",
+            "desc": "Dead Man's Switch Test"
+        }
+    ]
+}

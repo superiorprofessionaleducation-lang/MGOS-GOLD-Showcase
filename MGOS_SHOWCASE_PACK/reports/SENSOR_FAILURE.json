@@ -1,0 +1,7 @@
+{
+    "name": "SENSOR_FAILURE.json",
+    "score": 0.0,
+    "status": "PASS",
+    "defcon": "DEFCON 4 (Error)",
+    "desc": "Dead Man's Switch Test"
+}

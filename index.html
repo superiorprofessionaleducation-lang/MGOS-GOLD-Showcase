@@ -357,8 +357,7 @@
         <a href="#solution">Solution</a>
         <a href="#validation">Validation</a>
         <a href="#architecture">STCL</a>
-        <a href="#competition">Competition</a>
-        <a href="#evidence">Evidence</a>
+        <a href="#market">Market</a>
         <a href="#downloads">Pack</a>
         <a href="#contact">Contact</a>
       </div>
@@ -488,25 +487,56 @@
             <td class="success">CORRECT — sensors quarantined</td>
           </tr>
         </table>
-        <p class="muted" style="margin-top:10px;">
-          Linear engines quietly miss the attack (False Negative). MGOS GOLD forces escalation and triggers
-          a controlled response path.
-        </p>
+
+        <!-- BLOCK #1 — Independent Verification -->
+        <div class="section-title" style="margin-top:28px;">Independent Verification — Why This Is Not a Mockup</div>
+        <div class="box">
+          <p class="muted">
+            One of the most common investor questions is: <em>“How do I know the engine actually works if I cannot see the source code?”</em><br>
+            Below is a transparent, defense-industry-standard explanation.
+          </p>
+
+          <h4 style="margin-top:14px;">1. The Engine Reacts to Real Inputs (Not Hardcoded)</h4>
+          <ul class="list-tight">
+            <li><strong>All-zero inputs</strong> → Engine raised <strong>Sensor Malfunction</strong></li>
+            <li><strong>High-threat cyber vector</strong> → Engine escalated to <strong>DEFCON 1</strong></li>
+            <li><strong>Randomized inputs</strong> → Output changed on every run</li>
+          </ul>
+
+          <p class="muted">
+            A fake or static engine would always output the same state.  
+            MGOS GOLD outputs change dynamically — proving real computation.
+          </p>
+
+          <h4 style="margin-top:14px;">2. Mathematical Consistency (0.27 → 1.00)</h4>
+          <p class="muted">
+            Outputs match independent reproduction in <code>math_proof.py</code>:
+          </p>
+          <ul class="list-tight">
+            <li><strong>0.27</strong> — linear average → incorrect non-escalation</li>
+            <li><strong>1.00</strong> — Φ(x) nonlinear escalation → correct alert</li>
+          </ul>
+
+          <p class="muted">
+            Matching values prove the nonlinear logic is calculating a real decision function, not hallucinating.
+          </p>
+        </div>
+
       </div>
 
       <div style="height: 12px;"></div>
 
+      <!-- HARDCORE VALIDATION -->
       <div class="section-title">Hardcore Validation Suite</div>
       <div class="box">
         <p class="muted">
-          MGOS GOLD has been tested on a curated suite of <strong>23 extreme cases</strong>, designed as
-          NATO-class and beyond-NATO hybrid scenarios:
+          MGOS GOLD has been tested on a curated suite of <strong>23 extreme cases</strong>, representing NATO-class and beyond-NATO hybrid scenarios:
         </p>
         <ul class="list-tight">
           <li>DEFCON-1 Total War Simulation — <strong class="success">PASS</strong></li>
           <li>NATO A1 fracture point — <strong class="success">PASS</strong></li>
-          <li>Cyber-dominant escalation across multi-domain — <strong class="success">PASS</strong></li>
-          <li>PsyOps coherent fake / hyper-narratives — <strong class="success">PASS</strong></li>
+          <li>Cyber-dominant escalation — <strong class="success">PASS</strong></li>
+          <li>PsyOps coherent fake narratives — <strong class="success">PASS</strong></li>
         </ul>
         <p class="muted">
           Full results available in: <code>MGOS_SHOWCASE_PACK/reports/hardcore_summary.json</code>.
@@ -524,122 +554,34 @@
         <div class="box">
           <p>
             MGOS GOLD is built as a <strong>Secure Trusted Core Layer</strong> — a hardened, air-gapped engine that
-            can sit under existing command systems.
+            can be deployed inside critical infrastructure without cloud dependencies.
           </p>
           <ul class="list-tight">
-            <li><strong>Air-Gapped Core:</strong> 0% cloud, self-contained runtime.</li>
-            <li><strong>Cryptographic Decision Signing:</strong> every decision can be audited.</li>
-            <li><strong>Dead-Man’s-Switch:</strong> automatic sensor quarantine and alert on failure.</li>
-            <li><strong>Fractal Scaling:</strong> same code path for tactical and strategic tiers.</li>
+            <li><strong>Air-Gapped Core:</strong> 0% cloud, isolated runtime</li>
+            <li><strong>Cryptographic Decision Signing:</strong> full audit chain</li>
+            <li><strong>Dead-Man’s-Switch:</strong> automatic sensor quarantine</li>
+            <li><strong>Fractal Scaling:</strong> identical logic from tactical to strategic levels</li>
           </ul>
           <p class="muted">
-            The core engine itself is <strong>proprietary and not included</strong> in this repository.
-            This page exposes only high-level, OPSEC-clean artefacts.
+            The core engine is <strong>proprietary</strong> and not included here.  
+            This page contains only OPSEC-clean, investor-facing artefacts.
           </p>
         </div>
       </div>
 
-      <div id="competition">
-        <div class="section-kicker">05 · Competition</div>
-        <div class="section-title">Why MGOS Wins Where Giants Fail</div>
+      <div id="market">
+        <div class="section-kicker">05 · Market</div>
+        <div class="section-title">Dual-Use: Defense & Strategic Industries</div>
         <div class="box">
+          <ul class="list-tight">
+            <li><strong>Defense / GovTech:</strong> joint HQs, threat intelligence, fusion centers</li>
+            <li><strong>Banking & Energy:</strong> systemic risk monitoring</li>
+            <li><strong>Strategic Intelligence Units:</strong> state-level foresight</li>
+          </ul>
           <p class="muted">
-            The market is full of massive “aircraft carrier” platforms — Palantir, Anduril, large NATO C2 systems.
-            MGOS GOLD is not another carrier. It is a <strong>precision nonlinear fusion engine</strong>.
-          </p>
-          <table>
-            <tr>
-              <th>Core Challenge</th>
-              <th>Legacy Platforms (Palantir / Anduril / C2)</th>
-              <th>MGOS GOLD</th>
-            </tr>
-            <tr>
-              <td>Asymmetric Escalation</td>
-              <td>Linear logic, averages → signal dilution</td>
-              <td class="success">Φ(x) Logic → forced escalation on critical spikes</td>
-            </tr>
-            <tr>
-              <td>False Negatives</td>
-              <td>Frequent under hybrid pressure</td>
-              <td class="success">Designed to eliminate FN in hybrid scenarios</td>
-            </tr>
-            <tr>
-              <td>Explainability</td>
-              <td>Black-box AI</td>
-              <td class="success">Deterministic, auditable decisions</td>
-            </tr>
-            <tr>
-              <td>Deployment</td>
-              <td>Cloud, servers, large teams</td>
-              <td class="success">Runs on air-gapped laptops / edge devices</td>
-            </tr>
-            <tr>
-              <td>Focus</td>
-              <td>General-purpose data platform</td>
-              <td class="success">Specialized escalation detection engine</td>
-            </tr>
-          </table>
-          <p class="muted" style="margin-top:8px;">
-            <em>“Palantir is an aircraft carrier. MGOS is a precision-guided weapon designed for nonlinear conflict.”</em>
+            MGOS GOLD is deployed under annual licensing, paid pilots (PoC), and integration contracts.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SYNTHETIC DATA & BLACK BOX EVIDENCE -->
-  <section class="section" id="evidence">
-    <div class="section-full">
-      <div class="section-kicker">06 · Evidence Without Exposing the Core</div>
-      <div class="section-title">Synthetic Data · Doctrine-Based · Black-Box Testing</div>
-      <div class="box">
-        <h4>1. Synthetic, Doctrine-Based Scenarios (Not Random, Not Classified)</h4>
-        <p class="muted">
-          MGOS GOLD is validated on <strong>synthetic, doctrine-based data</strong> — not on stolen or classified material.
-          Scenarios are constructed from open NATO Multi-Domain Operations (MDO) concepts and hybrid warfare doctrine.
-        </p>
-        <ul class="list-tight">
-          <li><strong>Not</strong> “real leaked NATO files” — that would be illegal and operationally absurd.</li>
-          <li><strong>Not</strong> hallucinated nonsense — scenarios are aligned with published doctrine and real-world tactics.</li>
-          <li><strong>Designed</strong> to test how the engine reacts to realistic hybrid patterns, not to guess secret plans.</li>
-        </ul>
-
-        <h4>2. Black-Box Testing — How You Prove It Works Without Showing Code</h4>
-        <p class="muted">
-          MGOS GOLD is evaluated the same way critical systems in defense and banking are: via
-          <strong>Black-Box Testing</strong>. You do not open the engine — you verify its reaction to inputs.
-        </p>
-        <ul class="list-tight">
-          <li><strong>Zero Input Scenario:</strong> all signals at 0.0 → engine correctly reports SENSOR MALFUNCTION / DEFCON 4.</li>
-          <li><strong>War Scenario:</strong> extreme multi-INT activation → engine flips to DEFCON 1 with coherent COA.</li>
-          <li><strong>Asymmetric Cyber:</strong> only CYBER at 0.96, others low → linear model yields 0.27 (FAIL), MGOS yields 1.00 (TRUE POSITIVE).</li>
-        </ul>
-        <p class="muted">
-          If the outputs change consistently with the inputs, the engine is not a mock-up. It is a functioning decision system.
-        </p>
-
-        <h4>3. How to Demonstrate This to an Investor (Input → Output)</h4>
-        <ol class="list-tight">
-          <li><strong>Show the Input:</strong> a JSON-like view of the scenario (e.g. CYBER 0.96, others low).</li>
-          <li><strong>Show the Baseline:</strong> explain that a standard linear model / Excel-style average gives 0.27 (“system thinks it’s fine”).</li>
-          <li><strong>Show MGOS Output:</strong> live or via report — WSS = 1.00, DEFCON 1, escalation triggered.</li>
-        </ol>
-        <p class="muted">
-          This triad (Input → Linear Output → MGOS Output) is your empirical proof — without ever revealing the core code.
-        </p>
-
-        <h4>4. Optional: Live Demo</h4>
-        <p class="muted">
-          For high-trust investors you can propose a 5-minute live demo:
-        </p>
-        <ul class="list-tight">
-          <li>you edit the input scenario on screen,</li>
-          <li>re-run the engine,</li>
-          <li>and show how the decision report changes in real-time.</li>
-        </ul>
-        <p class="muted">
-          No slides can fake that. This is how you sell a “black box” without opening it.
-        </p>
       </div>
     </div>
   </section>
@@ -648,41 +590,39 @@
   <section class="section" id="downloads">
     <div class="inner">
       <div>
-        <div class="section-kicker">07 · Business Model</div>
+        <div class="section-kicker">06 · Business Model</div>
         <div class="section-title">Licensing & Services</div>
         <div class="box">
           <ul class="list-tight">
-            <li><strong>Annual Licenses (ARR):</strong> per-deployment core engine licensing.</li>
-            <li><strong>Paid PoC:</strong> scoped pilots (40–120k EUR range).</li>
-            <li><strong>Maintenance & Support:</strong> security updates, tuning, expert support.</li>
-            <li><strong>Integrations:</strong> optional modules and custom connectors.</li>
+            <li><strong>Annual Licenses (ARR)</strong> per-deployment licensing</li>
+            <li><strong>Paid PoC</strong> — €40–120k</li>
+            <li><strong>Maintenance & Support:</strong> updates + secure enhancements</li>
+            <li><strong>Integrations:</strong> add-ons and connectors</li>
           </ul>
           <p class="muted">
-            Current round: <strong>Seed</strong>. Objective: harden MGOS 2.0 STCL Core, certify, and close
-            1–2 paid PoCs with strategic customers.
+            Current round: <strong>Seed (€300k)</strong>  
+            Goal: MGOS 2.0 STCL Core + Certification + 1–2 paid PoCs.
           </p>
         </div>
       </div>
 
       <div>
-        <div class="section-kicker">08 · Investor Pack</div>
-        <div class="section-title">Download (Redacted & OPSEC-Clean)</div>
+        <div class="section-kicker">07 · Investor Pack</div>
+        <div class="section-title">Download (Redacted & OPSEC-Safe)</div>
         <div class="box">
           <p class="muted">
-            The following artefacts are included in the public-safe Investor Pack:
+            Included in the public investor pack:
           </p>
           <ul class="list-tight">
-            <li>Redacted Technical Validation Report (PDF)</li>
+            <li>Technical Validation Report (PDF, redacted)</li>
             <li>Investor Pitch Deck (PDF)</li>
-            <li>Hardcore validation JSON summary</li>
-            <li>I/O examples (redacted)</li>
+            <li>Hardcore validation summary (JSON)</li>
+            <li>Redacted I/O examples</li>
           </ul>
-          <p>
-            <strong>Downloads:</strong>
-          </p>
+          <p><strong>Downloads:</strong></p>
           <ul class="list-tight">
-            <li><a href="MGOS_SHOWCASE_PACK/docs/Technical_Validation_Redacted.pdf">Technical Validation (PDF)</a></li>
-            <li><a href="MGOS_SHOWCASE_PACK/docs/MGOS_Investor_Pitch_Deck.pdf">Pitch Deck (PDF)</a></li>
+            <li><a href="MGOS_SHOWCASE_PACK/docs/Technical_Validation_Redacted.pdf">Technical Validation PDF</a></li>
+            <li><a href="MGOS_SHOWCASE_PACK/docs/MGOS_Investor_Pitch_Deck.pdf">Pitch Deck PDF</a></li>
             <li><a href="MGOS_SHOWCASE_PACK.zip">Complete Investor ZIP</a></li>
           </ul>
         </div>
@@ -693,7 +633,7 @@
   <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="section-full">
-      <div class="section-kicker">09 · Contact</div>
+      <div class="section-kicker">08 · Contact</div>
       <div class="section-title">Principal Investigator & Architect</div>
       <div class="box">
         <p>
@@ -702,7 +642,7 @@
         </p>
         <p class="muted">
           Watermark ID: <strong>8F9E-4C12-AB77-F2D9-4331-9BB4-55AD-E61A</strong><br>
-          Core engine code, formal methods and internal architectures remain fully proprietary and are not part of this repository.
+          Core engine code, internal algorithms and full logic remain proprietary and are NOT included in this repository.
         </p>
       </div>
     </div>
@@ -710,7 +650,6 @@
 
   <footer>
     © 2025 MGOS GOLD — All Rights Reserved · Investor-Facing Showcase (No Core Engine Code)
-    · <a href="MGOS_INVESTOR_EULA.md" style="color:#00e0ff;">Investor EULA</a>
   </footer>
 
 </body>

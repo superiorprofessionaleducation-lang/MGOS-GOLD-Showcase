@@ -4,70 +4,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🛡️ MGOS GOLD — Asymmetric Intelligence</title>
+    <title>MGOS GOLD — Autonomous Multi-INT Fusion Engine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         body { background-color: #050505; color: #cbd5e1; font-family: 'Inter', sans-serif; }
         h1, h2, h3, .mono { font-family: 'JetBrains Mono', monospace; }
-        .card { background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(55, 65, 81, 0.5); transition: all 0.3s ease; }
-        .card:hover { border-color: rgba(59, 130, 246, 0.5); transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5); }
-        .badge-critical { background-color: #7f1d1d; color: #fca5a5; border: 1px solid #ef4444; }
-        .badge-success { background-color: #064e3b; color: #6ee7b7; border: 1px solid #10b981; }
-        .badge-warning { background-color: #451a03; color: #fcd34d; border: 1px solid #f59e0b; }
-        .hero-bg { background-image: radial-gradient(#1e293b 1px, transparent 1px); background-size: 20px 20px; opacity: 0.2; }
-        .glow-text { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+        
+        .card { background: rgba(17, 24, 39, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(55, 65, 81, 0.5); }
+        .card:hover { border-color: rgba(59, 130, 246, 0.5); }
+        
+        .nav-link { color: #94a3b8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-family: 'JetBrains Mono'; transition: color 0.2s; }
+        .nav-link:hover { color: #3b82f6; }
+        
+        .badge-green { background: rgba(16, 185, 129, 0.1); color: #34d399; border: 1px solid #059669; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-family: 'JetBrains Mono'; }
+        .badge-red { background: rgba(239, 68, 68, 0.1); color: #f87171; border: 1px solid #b91c1c; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-family: 'JetBrains Mono'; }
+        
+        .step-number { font-family: 'JetBrains Mono'; font-size: 3rem; color: #1e293b; font-weight: bold; line-height: 1; }
     </style>
 </head>
-<body class="min-h-screen relative overflow-x-hidden text-slate-300">
-    <div class="absolute inset-0 hero-bg z-0 pointer-events-none"></div>
-    <div class="relative z-10 max-w-6xl mx-auto px-6 py-12">
-        <header class="flex flex-col md:flex-row justify-between items-end border-b border-gray-800 pb-8 mb-16">
-            <div>
-                <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-tighter glow-text">MGOS GOLD</h1>
-                <p class="text-sm text-gray-500 mt-2 mono tracking-widest uppercase">Autonomous Multi-INT Fusion Engine</p>
-            </div>
-            <div class="text-right mt-6 md:mt-0">
-                <div class="text-white font-bold">Piotr Łukasz Jurkiewicz, PhD</div>
-                <div class="text-[10px] text-gray-600 mt-1 font-mono">ID: 8F9E-4C12-AB77-F2D9-4331-9BB4-55AD-E61A</div>
-            </div>
-        </header>
+<body class="min-h-screen relative selection:bg-blue-500/30">
 
-        <section class="mb-24" id="validation">
-            <h2 class="text-xl font-bold text-white mb-8 flex items-center mono tracking-wider">
-                <span class="text-blue-500 mr-3">></span> VALIDATION MATRIX (HARDCORE SUITE)
-            </h2>
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-gray-900">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="text-white font-bold tracking-tight mono">MGOS<span class="text-yellow-500">GOLD</span> / STCL</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#summary" class="nav-link">Summary</a>
+                <a href="#problem" class="nav-link">Problem</a>
+                <a href="#solution" class="nav-link">Solution</a>
+                <a href="#validation" class="nav-link">Validation</a>
+                <a href="#stcl" class="nav-link">STCL</a>
+                <a href="#market" class="nav-link">Market</a>
+                <a href="#verification" class="nav-link text-blue-400">Black-Box</a>
+                <a href="#pack" class="nav-link text-green-400">Pack</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto px-6 py-16">
+        
+        <!-- HEADER / SUMMARY -->
+        <section id="summary" class="text-center mb-24">
+            <div class="inline-flex items-center space-x-4 mb-6">
+                <span class="badge-green">TRL-6 VALIDATED</span>
+                <span class="badge-red">AIR-GAPPED / OPSEC CLEAN</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tighter mb-6">
+                MGOS GOLD
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                Autonomous Multi-INT Fusion Engine.<br>
+                <span class="text-gray-500 text-lg">Defense-grade nonlinear decision engine for hybrid conflict. Fuses OSINT / SIGINT / HUMINT / CYBER / GEOINT and anticipates escalation before human analysts see it.</span>
+            </p>
+            
+            <div class="mt-10 flex justify-center space-x-4">
+                <a href="#validation" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded transition">View The Money Slide</a>
+                <a href="#pack" class="px-6 py-3 border border-gray-600 hover:border-gray-400 text-gray-300 font-bold rounded transition">Download Investor Pack</a>
+            </div>
+        </section>
+
+        <!-- DASHBOARD SNAPSHOT -->
+        <div class="card p-8 rounded-xl mb-24 bg-gray-900/50">
+            <div class="flex justify-between items-center border-b border-gray-800 pb-4 mb-6">
+                <div class="text-xs text-gray-500 mono">MGOS GOLD — CORE TEST SNAPSHOT</div>
+                <div class="text-xs text-blue-500 mono">CLASS: DEFENSE / GOVTECH</div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-xs text-gray-500 uppercase tracking-widest mb-2">Asymmetric Cyber</div>
+                    <div class="text-4xl font-bold text-white mono">0.27 <span class="text-gray-600">→</span> <span class="text-green-400">1.00</span></div>
+                </div>
+                <div>
+                    <div class="text-xs text-gray-500 uppercase tracking-widest mb-2">False Negatives</div>
+                    <div class="text-2xl font-bold text-white">Mitigated</div>
+                </div>
+                <div>
+                    <div class="text-xs text-gray-500 uppercase tracking-widest mb-2">Pass Rate</div>
+                    <div class="text-2xl font-bold text-white">100%</div>
+                </div>
+            </div>
+            <div class="mt-6 text-center text-sm text-gray-400 pt-4 border-t border-gray-800">
+                Linear model: <span class="text-red-400">blind to asymmetric escalation</span>. 
+                MGOS: <span class="text-green-400">forces alert at critical fracture point</span>.
+            </div>
+        </div>
+
+        <!-- 01 PROBLEM -->
+        <section id="problem" class="mb-24 grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-4">
+                <h2 class="text-sm font-bold text-blue-500 mono mb-2">01 · PROBLEM</h2>
+                <h3 class="text-3xl font-bold text-white">Linear Analytics Fails in Nonlinear Warfare.</h3>
+            </div>
+            <div class="md:col-span-8 text-gray-400 leading-relaxed space-y-4">
+                <p>Current analytical stacks are built on linear aggregation (averages, dashboards, static scoring). In hybrid conflict this leads to <strong class="text-white">Average Dilution</strong>:</p>
+                <ul class="list-disc list-inside space-y-2 ml-2">
+                    <li>Critical cyber or info signals are averaged out as “noise”.</li>
+                    <li>False negatives appear in exactly the scenarios that matter most.</li>
+                    <li>Analysts drown in dashboards instead of seeing fracture points.</li>
+                </ul>
+                <p>Hybrid operations (CYBER + PSYOPS + GEOINT) are designed to exploit these blind spots. Traditional BI / SIEM / Excel-style tooling was never built for hyper-game dynamics.</p>
+            </div>
+        </section>
+
+        <!-- 02 SOLUTION -->
+        <section id="solution" class="mb-24 grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-4">
+                <h2 class="text-sm font-bold text-green-500 mono mb-2">02 · SOLUTION</h2>
+                <h3 class="text-3xl font-bold text-white">Nonlinear Φ(x) Engine with Fractal STCL.</h3>
+            </div>
+            <div class="md:col-span-8 text-gray-400 leading-relaxed space-y-4">
+                <p>MGOS GOLD replaces “describe and average” with <strong class="text-white">explain and escalate</strong>.</p>
+                <div class="grid grid-cols-1 gap-4 mt-4">
+                    <div class="card p-4 rounded border-l-2 border-green-500">
+                        <span class="text-white font-bold block mb-1">Nonlinear Φ(x) Logic</span>
+                        Critical override decision logic instead of simple thresholds.
+                    </div>
+                    <div class="card p-4 rounded border-l-2 border-green-500">
+                        <span class="text-white font-bold block mb-1">Multi-INT Fusion</span>
+                        OSINT / SIGINT / HUMINT / CYBER / GEOINT / DIPLO.
+                    </div>
+                    <div class="card p-4 rounded border-l-2 border-green-500">
+                        <span class="text-white font-bold block mb-1">Fractal STCL Core</span>
+                        Same code logic from drone-level (Edge) to HQ-level (Strategic).
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 VALIDATION -->
+        <section id="validation" class="mb-24">
+            <h2 class="text-sm font-bold text-red-500 mono mb-6">03 · VALIDATION</h2>
             <div class="card overflow-hidden rounded-xl">
-                <table class="w-full text-left border-collapse">
-                    <thead class="bg-gray-800/50 text-xs uppercase text-gray-400 font-mono tracking-wider">
+                <div class="p-6 border-b border-gray-800">
+                    <h3 class="text-2xl font-bold text-white">Mathematical Proof — 0.27 → 1.00</h3>
+                    <p class="text-gray-400 text-sm mt-2">Core benchmark scenario demonstrating why MGOS GOLD is a different class of system.</p>
+                </div>
+                <table class="w-full text-left text-sm text-gray-400">
+                    <thead class="bg-gray-900 text-xs uppercase font-mono">
                         <tr>
-                            <th class="p-6">Test Scenario</th>
-                            <th class="p-6">Linear Model (Std)</th>
-                            <th class="p-6">MGOS GOLD Φ(x)</th>
-                            <th class="p-6 text-right">System Status</th>
+                            <th class="px-6 py-4">Scenario</th>
+                            <th class="px-6 py-4">Metric</th>
+                            <th class="px-6 py-4">Linear Model</th>
+                            <th class="px-6 py-4">MGOS GOLD (Φ(x))</th>
+                            <th class="px-6 py-4 text-right">Verdict</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-800 text-sm">
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-6"><div class="font-bold text-white">Asymmetric Cyber Attack</div></td>
-                            <td class="p-6 font-mono text-red-400">0.27 (IGNORED)</td>
-                            <td class="p-6 font-mono text-green-400 font-bold text-lg">1.00 (ALERT)</td>
-                            <td class="p-6 text-right"><span class="badge-success px-3 py-1 rounded text-[10px]">🏆 SUPERIORITY PROVEN</span></td>
+                    <tbody class="divide-y divide-gray-800">
+                        <tr class="hover:bg-white/5">
+                            <td class="px-6 py-4 font-bold text-white">Asymmetric Cyber Attack</td>
+                            <td class="px-6 py-4 font-mono">WSS Score</td>
+                            <td class="px-6 py-4 font-mono text-red-500">0.27 (FAIL)</td>
+                            <td class="px-6 py-4 font-mono text-green-400 font-bold">1.00 (PASS)</td>
+                            <td class="px-6 py-4 text-right"><span class="text-blue-400 font-bold">TRUE POSITIVE</span></td>
                         </tr>
-                        <tr class="hover:bg-white/5 transition-colors">
-                            <td class="p-6"><div class="font-bold text-white">Sensor Failure (Zero Data)</div></td>
-                            <td class="p-6 font-mono text-gray-500">0.00 (PEACE)</td>
-                            <td class="p-6 font-mono text-blue-400 font-bold text-lg">ERROR CODE 4</td>
-                            <td class="p-6 text-right"><span class="badge-warning px-3 py-1 rounded text-[10px]">🛡️ DEAD MAN'S SWITCH</span></td>
+                        <tr class="hover:bg-white/5">
+                            <td class="px-6 py-4 font-bold text-white">Sensor Failure (DMS)</td>
+                            <td class="px-6 py-4 font-mono">DEFCON</td>
+                            <td class="px-6 py-4 font-mono text-gray-500">0 (False Peace)</td>
+                            <td class="px-6 py-4 font-mono text-yellow-500 font-bold">4 (Error Mode)</td>
+                            <td class="px-6 py-4 text-right"><span class="text-yellow-500">CORRECT REACTION</span></td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="p-4 bg-gray-900/50 text-xs text-center text-gray-500 border-t border-gray-800">
+                    Linear engines quietly miss the attack. MGOS GOLD forces escalation and triggers a controlled response path.
+                </div>
+            </div>
+            
+            <div class="mt-8 p-6 border border-gray-800 rounded-lg">
+                <h4 class="text-white font-bold mb-2">Hardcore Validation Suite</h4>
+                <p class="text-sm text-gray-400 mb-4">MGOS GOLD has been tested on a curated suite of 23 extreme cases (NATO-class):</p>
+                <div class="grid grid-cols-2 gap-2 text-xs mono text-gray-300">
+                    <div>✅ DEFCON-1 Total War Simulation</div>
+                    <div>✅ Cyber-dominant escalation</div>
+                    <div>✅ NATO A1 fracture point</div>
+                    <div>✅ PsyOps coherent fake / hyper-narratives</div>
+                </div>
             </div>
         </section>
-        
-        <footer class="mt-20 pt-8 border-t border-gray-800 text-center text-xs text-gray-600 mono">
-            <p class="mb-2">© 2025 All Rights Reserved | Piotr Łukasz Jurkiewicz, PhD</p>
+
+        <!-- 04 STCL -->
+        <section id="stcl" class="mb-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-sm font-bold text-gray-500 mono mb-2">04 · ARCHITECTURE</h2>
+                <h3 class="text-2xl font-bold text-white mb-4">Secure Trusted Core Layer (STCL)</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    MGOS GOLD is built as a hardened, air-gapped engine that sits under existing command systems.
+                    The core engine itself is <strong>proprietary and not included</strong> in this repository.
+                </p>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-3"></span>Air-Gapped Core: 0% cloud, self-contained.</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-3"></span>Cryptographic Decision Signing.</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-3"></span>Dead-Man’s-Switch: sensor quarantine.</li>
+                </ul>
+            </div>
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 flex items-center justify-center">
+                <div class="text-center">
+                    <div class="text-6xl mb-4">🔒</div>
+                    <div class="text-white font-bold">OPSEC CLEAN</div>
+                    <div class="text-xs text-gray-500 mt-2">Public Repository<br>Contains No Core Code</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 MARKET -->
+        <section id="market" class="mb-24">
+            <h2 class="text-sm font-bold text-gray-500 mono mb-6">05 · MARKET</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card p-6 rounded-lg">
+                    <h4 class="text-white font-bold mb-2">Defense / GovTech</h4>
+                    <p class="text-xs text-gray-400">Joint HQs, fusion centers, threat analysis units.</p>
+                </div>
+                <div class="card p-6 rounded-lg">
+                    <h4 class="text-white font-bold mb-2">Banking & Energy</h4>
+                    <p class="text-xs text-gray-400">Critical infrastructure, systemic risk monitoring.</p>
+                </div>
+                <div class="card p-6 rounded-lg">
+                    <h4 class="text-white font-bold mb-2">Strategic Intel</h4>
+                    <p class="text-xs text-gray-400">State-level security & strategic foresight.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 BLACK BOX VERIFICATION -->
+        <section id="verification" class="mb-24">
+            <h2 class="text-sm font-bold text-blue-400 mono mb-8">06 · BLACK-BOX VERIFICATION PROTOCOL</h2>
+            <p class="text-gray-400 mb-12 max-w-2xl">
+                Defense and financial institutions do not evaluate engines by reading source code. They evaluate them by <strong>repeatable behavior</strong>. Here is how we prove MGOS works without revealing proprietary IP.
+            </p>
+
+            <div class="space-y-12 relative border-l border-gray-800 ml-4 pl-12">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[3.2rem] top-0 bg-black text-gray-600 font-mono font-bold border border-gray-800 rounded w-8 h-8 flex items-center justify-center">1</div>
+                    <h4 class="text-white font-bold text-lg mb-2">Show the Input</h4>
+                    <p class="text-sm text-gray-400 mb-4">We start by showing a synthetic multi-INT vector (JSON).</p>
+                    <div class="bg-gray-900 p-4 rounded border border-gray-800 font-mono text-xs text-green-400">
+                        {<br>
+                        &nbsp;&nbsp;"OSINT": 0.20,<br>
+                        &nbsp;&nbsp;"CYBER": 0.96,<br>
+                        &nbsp;&nbsp;"SIGINT": 0.80<br>
+                        }
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative">
+                    <div class="absolute -left-[3.2rem] top-0 bg-black text-gray-600 font-mono font-bold border border-gray-800 rounded w-8 h-8 flex items-center justify-center">2</div>
+                    <h4 class="text-white font-bold text-lg mb-2">Show the Baseline (Linear Failure)</h4>
+                    <p class="text-sm text-gray-400 mb-4">We compute a baseline linear score (Excel / SIEM style).</p>
+                    <div class="p-3 bg-red-900/10 border border-red-900/30 rounded text-red-300 font-mono text-sm">
+                        Linear Model → 0.39 (False Negative)
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative">
+                    <div class="absolute -left-[3.2rem] top-0 bg-black text-blue-500 font-mono font-bold border border-blue-900 rounded w-8 h-8 flex items-center justify-center">3</div>
+                    <h4 class="text-white font-bold text-lg mb-2">Run MGOS GOLD (Live)</h4>
+                    <p class="text-sm text-gray-400 mb-4">We run the same input through the engine in a live terminal demo.</p>
+                    <div class="p-3 bg-green-900/10 border border-green-900/30 rounded text-green-400 font-mono text-sm font-bold">
+                        MGOS GOLD → 1.00 (Critical Threat — DEFCON 1)
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative">
+                    <div class="absolute -left-[3.2rem] top-0 bg-black text-gray-600 font-mono font-bold border border-gray-800 rounded w-8 h-8 flex items-center justify-center">4</div>
+                    <h4 class="text-white font-bold text-lg mb-2">Live Input Change</h4>
+                    <p class="text-sm text-gray-400">
+                        During a call, we change the input live. If the critical domain is reduced, the score falls instantly.
+                        This proves the engine is computing, not "hard-coded".
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07 DOWNLOADS -->
+        <section id="pack" class="mb-24">
+            <div class="card p-10 rounded-2xl bg-gradient-to-r from-gray-900 to-gray-800 border-gray-700">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-6 md:mb-0">
+                        <h2 class="text-2xl font-bold text-white mb-2">07 · INVESTOR PACK</h2>
+                        <p class="text-gray-400 text-sm">REDACTED & OPSEC-CLEAN</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="docs/Technical_Validation_Redacted.pdf" class="px-5 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded font-bold transition">Technical PDF</a>
+                        <a href="docs/MGOS_Investor_Pitch_Deck.pdf" class="px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded font-bold transition">Pitch Deck PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="border-t border-gray-800 pt-12 pb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="text-white font-bold text-lg mb-2">Piotr Łukasz Jurkiewicz, PhD</div>
+                    <p class="text-gray-500 text-sm">Founder & Architect of MGOS GOLD<br>Author of Φ(x) Logic</p>
+                </div>
+                <div class="text-right">
+                    <div class="text-xs text-gray-600 mono mb-2">WATERMARK ID: 8F9E-4C12-AB77-F2D9-4331-9BB4-55AD-E61A</div>
+                    <p class="text-xs text-gray-600">Core engine code, formal methods and internal architectures<br>remain fully proprietary and are not part of this repository.</p>
+                </div>
+            </div>
         </footer>
+
     </div>
 </body>
 </html>
